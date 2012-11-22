@@ -28,9 +28,12 @@ test(  "testing WordPunctTokenizer", function() {
 test(  "testing JaroWinklerDistance", function() { 
   
 });
+
 test(  "testing LevenshteinDistance", function() { 
-  
+  var result = natural.LevenshteinDistance("ones", "onez", { insertion_cost: 1, deletion_cost: 1, substitution_cost: 1});
+  deepEqual(result, 1, "We expect value to be '1'");  
 });
+
 test(  "testing modified LevenshteinDistance", function() { 
   
 });
